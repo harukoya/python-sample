@@ -1,0 +1,24 @@
+{
+  "name": "Python Sample",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    {
+      "type": "bind",
+      "source": "${localWorkspaceFolder}/workspace",
+      "target": "/workspace",
+      "consistency": "cached"
+    },
+  ],
+  "onCreateCommand": "pip3 install -r requirements.txt",
+  "forwardPorts": [3000],
+  "extensions": [
+    "ms-python.python",
+    "KevinRose.vsc-python-indent",
+    "ms-python.vscode-pylance",
+    "oderwat.indent-rainbow",
+    "vscode-icons-team.vscode-icons",
+    "VisualStudioExptTeam.vscodeintellicode",
+  ]
+}
